@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+echo '# Input and output' > notes.md
+
+echo "This note is about I/O in bash" >> notes.md
+
+# heredoc, skriva flera lines av text
+cat >> .notes.md <<EOF
+
+## Standard streams in bash
+
+- standard input 0 --> input to a command
+- standard input 1 --> normal command output
+- standard error 2 --> error message
+
+EOF
+
+echo "##Files in this folder " >> notes.md
+echo >> notes.md
+
+tree >> notes.md
