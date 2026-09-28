@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+age=19
+if [[ $age -le  18 ]]; then
+	echo "You may not enter"
+elif [[ $age -ge 18 ]]; then
+	echo "You may enter"
+fi
+
+
+
+score=56
+
+
+# if elif elif ... else
+if [[ $score -ge 90 ]]; then
+	echo "grade A"
+ 
+elif [[ $score -ge 80 ]]; then
+	echo "grade B"
+
+elif [[ $score -ge 60 ]]; then
+	echo "grade C"
+
+elif [[ $score -ge 50 ]]; then
+	echo "grade D"
+
+elif [[ $score -ge 40 ]]; then
+	echo "grade E"
+
+else
+	echo "grade F"
+fi
+
+number=90
+if [[ $number -gt 43 ]]; then
+	echo "$number > 42"
+fi
