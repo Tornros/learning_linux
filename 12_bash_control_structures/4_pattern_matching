@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+filename="hund.png"
+
+if [[ "$filname == *.txt ]]; then
+	echo "text file"
+elif [[ "$filename == *.png ]]; then
+	echo "image"
