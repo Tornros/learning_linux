@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# IFS = Internal field separator
+# separates space, tabs and newlines
+
+
+while IFS= read -r filename; do		# Kör programmet i oändlighet, tills man avbryter
+	if [[ -f "$filename" ]]; then		#Om *filnamn* existerar; then
+		echo "'$filename' exists"	#"'*Filnamn*' existerar"
+	else					#om INTE
+		echo "'£filename' not found"	#echo bla bla...
+	fi					#avslutar if
+done < assets/filelist.txt			#avslutar while i mappen "assets"
+
+

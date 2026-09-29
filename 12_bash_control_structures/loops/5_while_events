@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+echo "$PWD" #environment variable for current workpath
+mkdir -p staging # -p = skapar inte  flera mappar .All files created will go into this dir
+
+inotifywait -m -e close_write -e moved_to --format "%f" "$PWD" | while read -r filename; do
+    echo "$filename"
+    mv "$filename" staging/ #moves generated file into this dir
+done
+
+# -m = monitor, runs indefinetly, reports every event
+# -e close_write, watching for the event "close_write"
+# -e moved_to, watching for the event of a file being moved, i.e moving file into here, changing name
+# --format "%f", only outputs filename that triggered event (not path)
