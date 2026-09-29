@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+filename="hund.png"
+
+esac
+# if [[ "$filname" == *.txt ]]; then
+# 	echo "text file"
+# elif [[ "$filename" == *.png ]]; then
+# 	echo "image"
+# fi
+
+case "$filename" in
+	*.txt) echo "'$filename' is a text file";;
+	*.jpeg|*.png) echo "'$filename' is an image file";;
+	*) echo "unknown file  type";;
+esac

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+echo '# Input and output' > README.md
