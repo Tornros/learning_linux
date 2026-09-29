@@ -1,3 +1,22 @@
 #!/usr/bin/env bash
 
-
+#SQUARE - Circumference, area
+#read -p "Square: Enter a side length (cm):" s_length	
+#echo "The square has a circumference of: $(($s_length*4))cm"
+#echo "The square has an area of: $(($s_length*$s_length))cm"
+#echo
+#echo
+#RECTANGLE - Circumference, area
+#read -p "Rectangle: Enter side A length (cm):" r_length
+#read -p "Rectangle: Enter side B length (cm):" r_width
+#echo "The rectangle has a circumference of: $((($r_length*2)+($r_width*2)))cm"
+#echo "The rectangle has an area of: $((r_length*r_width))cm2"
+#echo
+#echo
+#CIRCLE - Radius, unit circle
+read -p "Circle: Enter circle radius (cm):" c_radius
+echo "The circle has a circumference of: $(echo "scale=2; (3.14*2) * $c_radius" | bc)cm"
+echo "The circle has an area of: $(echo "scale=2; 3.14 * ($c_radius*$c_radius)" | bc)cm2"
+if [[ $c_radius -eq 1 ]]; then
+	echo "The circle is a unit circle"
+fi
