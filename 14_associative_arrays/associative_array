@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+declare -A movie_ratings
+# declares that this code is an array ^
+# declare -a → vanlig array med numeriska index (0, 1, 2...)
+# declare -A → associativ array med namngivna keys
+movie_ratings["Inception"]=5
+movie_ratings["Terminator 1"]=4
+movie_ratings["Bob's Burgers the Movie"]=10
+
+echo "${movie_ratings[Inception]}"
+# Movie titles = our [keys]
+# Getting the values written out ^
+
+for movie in "${!movie_ratings[@]}"; do
+	echo "$movie"
+# Lists all keys ^
+# @ = all elements of the key (all movies)
+done
+
+for movie in "${!movie_ratings[@]}"; do
+	echo "The movie '$movie' has rating ${movie_ratings[$movie]}"
+done
+# ${movie_ratings[$movie]} hämtar $movie's tidigare etablerade poäng
