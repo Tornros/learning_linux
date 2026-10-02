@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+#suffix - file extension, latter part. .pdf, .png
+
+file=secret.projectX.pdf
+
+echo "${file#*.}"
+

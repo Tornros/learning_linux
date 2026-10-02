@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+file=secret.projectX.pdf
+
+echo "${file#*.}"
+# starts from beginning, goes to 1st, removes everything before
+# # = non greedy. Finds first match, then it's pleased
+
+echo "${file##*.}"
+# ## = greedy
+
+echo "${file%.*}"
+# start from end
+
+echo "${file%%.*}"
+# greedy
+
+# environment variable
+echo "$PWD"
+
+repo_path="${PWD%/*}"
+echo "$repo_path"
+#% = går från slutet
+#tar bort sista suffix
+
+repo_name="${repo_path##*/}"
+echo "$repo_name"

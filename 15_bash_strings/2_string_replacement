@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+fruit='sweet mango mango'
+
+echo "${fruit/mango/kiwi}"
+# Replace first mango with kiwi
+
+echo "${fruit//mango/kiwi}"
+# Replace both mango with kiwi
+
+echo "${fruit/%mango/kiwi}"
+#Replace last mango with kiwi
+
+echo "${fruit/#mango/kiwi}"
+
+

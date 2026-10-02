@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+fruit='sweet mango'
+ 
+	echo '$fruit'
+	echo "$fruit"
+# 'text' = literal string, writes exactly what it says
+# "text" = expanding, writes out the variable
+
+echo "${fruit:2:1}"
+# {} creates an operation
+# slices, starts at second letter :2, writes out one in length :1
+
+echo "${#fruit}"
+# # = number of elements in our string
+
+echo "${fruit: -5}"
+# counts five elements from the end, then writing from there 
