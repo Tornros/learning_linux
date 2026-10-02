@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+fruits=(apple pear banana kiwi)
+echo "$fruits"
+echo "${fruits[0]}"
+echo "${fruits[2]}"
+# Plockar specifika keys
+
+echo "${fruist[-1]}"
+#Indexes from the end
+
+echo "${fruits[@]}"
+# Gets all elements
+
+echo "${fruits[@]:1:2}"
+# Slicing
